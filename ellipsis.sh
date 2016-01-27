@@ -11,6 +11,9 @@ pkg.install() {
   if ! utils.cmd_exists z; then
     git.clone "https://github.com/rupa/z" $HOME/.z
   fi
+  if [ -e $HOME/.zshrc.pre-oh-my-zsh ]; then
+      mv $HOME/.zshrc.pre-oh-my-zsh $HOME/.zshrc
+  fi
 }
 
 pkg.link() {
