@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
-ZSH_THEME="muse"
+ZSH_THEME="half-life"
 COMPLETION_WAITING_DOTS="true"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 plugins=(git git-flow django osx virtualenvwrapper encode64 brew zsh-syntax-highlighting)
