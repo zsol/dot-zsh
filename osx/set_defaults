@@ -1,7 +1,22 @@
 #!/bin/sh
 
 defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g KeyRepeat -int 0.02
+
+# Enable AirDrop over Ethernet and on Unsupported Macs
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
+
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
+
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
+sudo nvram SystemAudioVolume=" "
